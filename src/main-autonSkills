@@ -1,5 +1,5 @@
-  setAutonSpeeds();
-mogomech.set(false);
+setAutonSpeeds();
+// mogomech.set(false);
 
   contakeForward();
   wait(0.8,sec);
@@ -50,7 +50,7 @@ mogomech.set(false);
 
   forwardDrive(2.8);
   wait(1.2,sec);
-  turnRight(2.13);
+  turnRight(2.12);
   wait(1.7,sec);
   backwardDrive(7.5);
   contakeForward();
@@ -66,6 +66,9 @@ mogomech.set(false);
   // conveyor.stop();
   forwardDrive(2.8);
   wait(1,sec);
+  conveyor.spin(reverse);
+  wait(0.3,sec);
+  conveyor.spin(fwd);
   turnLeft(1.42);
   wait(1,sec);
   conveyor.spin(fwd);
@@ -90,13 +93,82 @@ mogomech.set(false);
   wait(1.3,sec);
   backwardDrive(2.5);
   wait(0.8,sec);
-  conveyor.spin(reverse);
-  wait(0.2,sec);
-  conveyor.spin(fwd);
-  wait(0.2,sec);
+  conveyor.stop();
   switchMogo();
-  wait(0.2,sec);
-  forwardDrive(1.2);
+
+  wait(1,sec);
+  forwardDrive(1.5);
+  wait(0.5,sec);
+  turnLeft(0.8);
+  wait(0.5,sec);
+  Drivetrain.setDriveVelocity(60, percent);
+  forwardDrive(8);
+  Drivetrain.setDriveVelocity(35, percent);
+  wait(2,sec);
+  turnRight(0.63);
+  conveyor.stop();
+  wait(1,sec);
+  forwardDrive(2.4);
+  wait(1.5, sec);
+  conveyor.stop();
+  turnRight(2.5);
+  wait(2, sec);
+  backwardDrive(5);
+  wait (3, sec);
+  backwardDrive(0.7);
+  wait(0.28,sec);
+  switchMogo();//clamp
+  wait(0.5,sec);
+  conveyor.spin(fwd);
+  wait(2, sec);
+  forwardDrive(0.5);
+  wait (0.8, sec);
+  switchMogo();//release
+  turnRight(0.9);
+  wait(1, sec);
+  Drivetrain.setDriveVelocity(80, percent);
+  forwardDrive(14);
+  wait(3,sec);
+  Drivetrain.setDriveVelocity(40, percent);
+  backwardDrive(2);
+  wait(1.5, sec);
+  turnRight(1.7);
+  wait(1.4, sec);
+  Drivetrain.setDriveVelocity(80, percent);
+  forwardDrive(30);
+  wait(4, sec);
+  turnLeft(1.2);
+  wait(1,sec);
+  forwardDrive(4);
+
+
+  
+  // conveyor.spin(reverse);
+  // wait(0.2,sec);
+  // conveyor.spin(fwd);
+  // wait(0.2,sec);
+
+  // (wall stake) turnLeft(1.2);
+  // wait(0.5,sec);
+  // forwardDrive(7.36);
+  // wait(3,sec);
+  // turnLeft(1.2);
+  // wait(0.5,sec);
+  // wallStakeLoad();
+  // conveyor.spin(fwd);
+  // wait(1, sec);
+  // forwardDrive(1.2);
+  // wait(1,sec);
+  // forwardDrive(1.2);
+  // wait(1,sec);
+  // conveyor.stop();
+  // wallStakeScore();
+  // wait(0.5,sec);
+  // wallStakeRest();
+  // backwardDrive(3);
+  // wait(1.5,sec);
+  // turnLeft(1.2);
+  // wait(0.5,sec);
 
 
 //   setAutonSpeeds();
