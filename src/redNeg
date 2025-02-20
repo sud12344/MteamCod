@@ -1,47 +1,84 @@
-setAutonSpeeds();
-mogomech.set(false);
-Drivetrain.setDriveVelocity(30.5, percent);
-  backwardDrive(4.6);
-  wait(1.5, sec);
-  mogomech.set(true);
-  wait(0.5, sec);
-  contakeForward();
-  wait(0.5, sec);
-  turnRight(1.9);
-  wait(0.9, sec);
-  Drivetrain.setStopping(coast);
-  Drivetrain.setDriveVelocity(50, percent);
-  conveyor.stop();
-  forwardDrive(1.7);
-  wait(1, sec);
-  conveyor.spin(fwd);
-  wait(0.4,sec);
-  backwardDrive(0.4);
-  wait(0.4,sec);
-  turnLeft(1.1);
-  wait(0.7,sec);
-  conveyor.stop();
-  forwardDrive(0.9);
-  wait(1,sec);
-  conveyor.spin(fwd);
-  turnLeft(1.65);
-  wait(0.95,sec);
+//     setAutonSpeeds();
+// mogomech.set(false);
+// Drivetrain.setDriveVelocity(30.5, percent);
+//   backwardDrive(4.6);
+//   wait(1.5, sec);
+//   mogomech.set(true);
+//   wait(0.5, sec);
+//   contakeForward();
+//   wait(0.5, sec);
+//   turnRight(1.9);
+//   wait(0.9, sec);
+//   Drivetrain.setStopping(coast);
+//   Drivetrain.setDriveVelocity(50, percent);
+//   conveyor.stop();
+//   forwardDrive(1.7);
+//   wait(1, sec);
+//   conveyor.spin(fwd);
+//   wait(0.4,sec);
+//   backwardDrive(0.4);
+//   wait(0.4,sec);
+//   turnLeft(1.1);
+//   wait(0.7,sec);
+//   conveyor.stop();
+//   forwardDrive(0.9);
+//   wait(1,sec);
+//   conveyor.spin(fwd);
+//   turnLeft(1.65);
+//   wait(0.95,sec);
 
-  intakePiston.set(true); //gets the alliance ring
-  conveyor.stop();
-  forwardDrive(5.5);
-  wait(1.5,sec);
-  intakePiston.set(false);
-  conveyor.spin(fwd);
-  wait(0.5,sec);
-  backwardDrive(3);
-  wait(0.7,sec);
-  turnLeft(1.9);
-  wait(1.1,sec);
-  forwardDrive(2.5); //
+//   intakePiston.set(true); //gets the alliance ring
+//   conveyor.stop();
+//   forwardDrive(5.5);
+//   wait(1.5,sec);
+//   intakePiston.set(false);
+//   conveyor.spin(fwd);
+//   wait(0.5,sec);
+//   backwardDrive(3);
+//   wait(0.7,sec);
+//   turnLeft(1.9);
+//   wait(1.1,sec);
+//   forwardDrive(2.5); //
 
   // forwardDrive(2); //skips alliance ring
   // wait(0.7,sec);
   // turnLeft(1.7);
   // wait(0.9,sec);
   // forwardDrive(2.6); //
+
+
+//NO CENTER RINGS
+
+setAutonSpeeds();
+mogomech.set(false);
+Drivetrain.setDriveVelocity(30.5, percent);
+  backwardDrive(4.6);
+  wait(1.5, sec);
+  mogomech.set(true);
+  wait(0.4, sec);
+  contakeForward();
+  wait(1, sec);
+  turnRight(1);
+  wait(1, sec);
+  forwardDrive(2.3);
+  wait(1.5,sec);
+  wait(0.5,sec);
+
+  turnLeft(1.85); // gets alliance ring
+  wait(0.7,sec);
+  intakePiston.set(true);
+  conveyor.stop();
+  forwardDrive(5.4);
+  wait(2.7,sec);
+  intakePiston.set(false);
+  conveyor.spin(fwd);
+  wait(0.5,sec);
+  forwardDrive(0.3);
+  Drivetrain.setDriveVelocity(50, percent);
+  wait(0.7,sec);
+
+  backwardDrive(3.3); //touches tower AFTER ALLIANCE RING
+  wait(1,sec);
+  turnLeft(1);
+  wait(1,sec);
+  forwardDrive(2); // 
